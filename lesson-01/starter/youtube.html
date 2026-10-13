@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube.com Clone</title>
+
+    <!--
+      link は別ファイルをこのページにつなぐ。
+      rel="stylesheet" は「これは見た目の指定（CSS）」という意味。
+      href は、この HTML から見たファイルの場所。
+      HTML は「何があるか」、CSS は「どう見えるか」。ここからはファイルを分ける。
+      styles/youtube.css を読む link を書く。
+    -->
+
+    <!--
+      Google Fonts から Roboto を読む link を3つ書く。YouTube の字体。
+      400 は普通、500 は少し太い、700 は太い。
+    -->
+  </head>
+  <body>
+    <!--
+      div は中身をまとめる箱。ボタンや段落と違い、div 自体に意味はない。
+      意味は class で付ける。class="video-preview" は「動画1本ぶんの箱」。
+      CSS ではドットを付けて .video-preview と書く。
+      この箱を2つ作り、中は次の入れ子にする。
+
+      div.video-preview
+        div.thumbnail-row
+          img.thumbnail
+        div.video-info
+          p.video-title
+
+      img は画像。src はこの HTML から見たファイルの場所。
+      alt は画像が出ないときの代わりの文字。タイトルを入れる。
+      1枚目の src は thumbnails/thumbnail-1.webp
+      2枚目の src は thumbnails/thumbnail-2.webp
+
+      p は段落。1枚目のタイトルは
+      Talking Tech and AI with Google CEO Sundar Pichai!
+      2枚目は
+      Try Not To Laugh Challenge #9
+    -->
+  </body>
+</html>

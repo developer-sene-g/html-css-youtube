@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube.com Clone</title>
+
+    <!--
+      link は別ファイルをこのページにつなぐ。
+      rel="stylesheet" は「これは見た目の指定（CSS）」という意味。
+      href は、この HTML から見たファイルの場所。styles フォルダの中の youtube.css。
+      HTML は「何があるか」、CSS は「どう見えるか」。長くなったらファイルを分ける。
+    -->
+    <link rel="stylesheet" href="styles/youtube.css">
+
+    <!--
+      下の3つは、Google Fonts から Roboto を読む。YouTube が使っている字体。
+      400 は普通、500 は少し太い、700 は太い。タイトルでは 500 を使う。
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="thumbnail" src="thumbnails/thumbnail-1.webp" alt="Talking Tech and AI with Google CEO Sundar Pichai!">
+      </div>
+      <div class="video-info">
+        <p class="video-title">
+          Talking Tech and AI with Google CEO Sundar Pichai!
+        </p>
+      </div>
+    </div>
+
+    <!-- 1枚目と同じ構造。クラスが同じなので、CSS は書き直さない。 -->
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="thumbnail" src="thumbnails/thumbnail-2.webp" alt="Try Not To Laugh Challenge #9">
+      </div>
+      <div class="video-info">
+        <p class="video-title">
+          Try Not To Laugh Challenge #9
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

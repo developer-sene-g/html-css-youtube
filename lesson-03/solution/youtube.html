@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube.com Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/youtube.css">
+  </head>
+  <body>
+    <!--
+      header はページの上部を表す箱。div と同じく中をまとめられるが、
+      「ここがヘッダー」という意味がある。
+      左にロゴ、中央に検索、右に自分のアイコン。
+    -->
+    <header class="header">
+      <div class="left-section">
+        <!--
+          SVG はアイコン用の画像形式。書き方は img と同じで、src にパスを入れる。
+          拡大してもぼけない。alt はロゴの名前。
+        -->
+        <img class="youtube-logo" src="icons/youtube-logo.svg" alt="YouTube">
+      </div>
+
+      <div class="middle-section">
+        <!--
+          input は、ユーザーが文字を入れる欄。
+          type="text" は1行の文字。placeholder は、空のときに見せるヒント。
+        -->
+        <input class="search-bar" type="text" placeholder="Search">
+
+        <!--
+          button は押せるボタン。type="button" は、ページを送信しないただのボタン。
+          中に検索アイコンの img を入れる。
+        -->
+        <button class="search-button" type="button">
+          <img class="search-icon" src="icons/search.svg" alt="Search">
+        </button>
+
+        <!-- 検索の横にある、音声検索の丸いボタン。border-radius で円にする。 -->
+        <button class="voice-search-button" type="button">
+          <img class="voice-search-icon" src="icons/voice-search-icon.svg" alt="Voice search">
+        </button>
+      </div>
+
+      <div class="right-section">
+        <!-- ログイン中のユーザーのアイコン。動画の作者とは別。 -->
+        <img class="current-user-picture" src="channel-pictures/my-channel.jpeg" alt="Your channel">
+      </div>
+    </header>
+
+    <!-- 動画カードの並び。ヘッダーは端まで広げ、余白はこの箱だけに付ける。 -->
+    <div class="video-grid">
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/thumbnail-1.webp" alt="Talking Tech and AI with Google CEO Sundar Pichai!">
+        </div>
+
+        <!--
+          video-info-grid は、作者のアバターと文字を横に並べる箱。
+          channel-picture がアバター、video-info がタイトルと名前と回数。
+        -->
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="channel-pictures/channel-1.jpeg" alt="Marques Brownlee">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Talking Tech and AI with Google CEO Sundar Pichai!
+            </p>
+            <!-- チャンネル名。タイトルの下、再生回数の上に置く。 -->
+            <p class="video-author">
+              Marques Brownlee
+            </p>
+            <p class="video-stats">
+              3.4M views &#183; 6 months ago
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/thumbnail-2.webp" alt="Try Not To Laugh Challenge #9">
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" src="channel-pictures/channel-2.jpeg" alt="Markiplier">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Try Not To Laugh Challenge #9
+            </p>
+            <p class="video-author">
+              Markiplier
+            </p>
+            <p class="video-stats">
+              19M views &#183; 4 years ago
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+/*
+  body はページ全体。
+  margin: 0 で、ブラウザの初期余白を消す。
+  背景は white、文字色は rgb(15, 15, 15)。暗い画面でも文字が見えるようにするため。
+  内側の余白 padding は 24px。
+*/
+
+/*
+  p はすべての段落。
+  font-family は字体。Roboto, Arial。
+  ブラウザが付ける上下の margin は 0 にする。
+*/
+
+/*
+  display は並び方。
+  block（div の初期値）は次の要素を下に落とす。
+  inline-block は横に並べつつ、幅を指定できる。
+  vertical-align: top は、高さの違う箱の上を揃える。
+  .video-preview に width: 300px、inline-block、vertical-align: top、margin-right: 15px。
+*/
+
+/*
+  img は文字と同じ行に入るので、下にすき間が残る。
+  display: block でそのすき間を消す。
+  .thumbnail は width: 100%、display: block。
+  .thumbnail-row の margin-bottom は 12px。画像とタイトルの間。
+*/
+
+/* .video-info は text-align: left。タイトルを左に揃える。 */
+
+/*
+  .video-title は font-size: 14px、font-weight: 500、line-height: 20px。
+  font-weight: 500 は少し太い字。line-height は行の高さ。
+*/

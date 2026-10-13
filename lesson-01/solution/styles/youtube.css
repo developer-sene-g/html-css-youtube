@@ -1,0 +1,65 @@
+/*
+  body はページ全体。
+  margin: 0 は、ブラウザが最初から付けている外側の余白を消す。
+  背景を白、文字をほぼ黒にしておく。指定しないと、暗いブラウザでは文字が見えない。
+*/
+body {
+  margin: 0;
+  padding: 24px;
+  background-color: white;
+  color: rgb(15, 15, 15);
+}
+
+/*
+  セレクタ p は、ページ内のすべての段落。
+  font-family は字体。Roboto が読めないときは Arial を使う。
+*/
+p {
+  font-family: Roboto, Arial;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*
+  display は並び方。
+  block（div の初期値）は横いっぱいに広がり、次の要素は下に落ちる。
+  inline-block は同じ行に並べつつ、幅を指定できる。カードを横に置くために使う。
+  vertical-align: top は、その行の中で箱の上を揃える。
+  1枚目のタイトルだけ2行でも、画像の上がずれない。
+  margin-right は箱の右側の外側の余白。カードの間を空ける。
+*/
+.video-preview {
+  width: 300px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+}
+
+/*
+  img は初期状態だと文字と同じ行に入り、画像の下に数pxのすき間が残る。
+  display: block にすると、そのすき間は消える。
+  width: 100% は、親のカード（300px）の幅いっぱい。高さは画像の比率のまま。
+*/
+.thumbnail-row {
+  margin-bottom: 12px;
+}
+
+.thumbnail {
+  width: 100%;
+  display: block;
+}
+
+/* text-align は、箱の中の文字を左右のどこに置くか。left でタイトルを左に揃える。 */
+.video-info {
+  text-align: left;
+}
+
+/*
+  font-size は文字の大きさ。font-weight: 500 は Roboto の少し太い字。
+  line-height は行の高さ。タイトルが2行になったときの行間。
+*/
+.video-title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}

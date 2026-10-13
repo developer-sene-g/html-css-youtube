@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube.com Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/youtube.css">
+  </head>
+  <body>
+    <!--
+      header はページ上部の箱。div と同じく中をまとめるが、「ヘッダー」という意味がある。
+      左にロゴ、中央に検索、右に自分のアイコン、の3つの div を入れる。
+
+      ロゴは img。SVG はアイコン用の画像で、書き方は今までの img と同じ。
+      src は icons/youtube-logo.svg。クラスは youtube-logo。
+
+      input は文字を入れる欄。type="text" は1行。placeholder="Search" は空のときのヒント。
+      クラスは search-bar。
+
+      button は押せるボタン。type="button" にすると、ページを送信しない。
+      検索ボタンの中に icons/search.svg、その右に音声検索の button と icons/voice-search-icon.svg。
+
+      右の自分のアイコンは channel-pictures/my-channel.jpeg。クラスは current-user-picture。
+    -->
+
+    <div class="video-grid">
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/thumbnail-1.webp" alt="Talking Tech and AI with Google CEO Sundar Pichai!">
+        </div>
+
+        <!--
+          video-info-grid で、作者のアバターと文字を横に並べる。
+          channel-picture の中に img.profile-picture。src は channel-pictures/channel-1.jpeg。
+          これは動画の作者。ヘッダー右の自分のアイコンとは別。
+          タイトルの下に p.video-author を足す。文字は Marques Brownlee。
+        -->
+        <div class="video-info">
+          <p class="video-title">
+            Talking Tech and AI with Google CEO Sundar Pichai!
+          </p>
+          <p class="video-stats">
+            3.4M views &#183; 6 months ago
+          </p>
+        </div>
+      </div>
+
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/thumbnail-2.webp" alt="Try Not To Laugh Challenge #9">
+        </div>
+        <!-- 2本目のアバターは channel-pictures/channel-2.jpeg。名前は Markiplier。 -->
+        <div class="video-info">
+          <p class="video-title">
+            Try Not To Laugh Challenge #9
+          </p>
+          <p class="video-stats">
+            19M views &#183; 4 years ago
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
