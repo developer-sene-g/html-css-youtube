@@ -7,5 +7,6 @@
 1. [レッスン1](lesson-01/starter/youtube.html) … CSS を分ける、`div`、クラス、横並び、サムネイル
 2. [レッスン2](lesson-02/starter/youtube.html) … タイトルの下に再生回数
 3. [レッスン3](lesson-03/starter/youtube.html) … 作者のアバター、検索欄、YouTube ロゴ
+4. [レッスン4](lesson-04/starter/youtube.html) … CSS Grid で3列に並べる、動画を6本に増やす
 
 画像とアイコンの元データは [SuperSimpleDev/html-css-course](https://github.com/SuperSimpleDev/html-css-course) から取り、`assets/` に置いてあります。使うレッスンの HTML の横にもコピーしてあります。

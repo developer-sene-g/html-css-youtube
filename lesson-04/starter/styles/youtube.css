@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  background-color: white;
+  color: rgb(15, 15, 15);
+  font-family: Roboto, Arial;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.header {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.left-section {
+  width: 150px;
+}
+
+.youtube-logo {
+  height: 20px;
+  display: block;
+}
+
+.middle-section {
+  flex: 1;
+  max-width: 640px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  flex: 1;
+  box-sizing: border-box;
+  height: 40px;
+  padding-left: 12px;
+  font-family: Roboto, Arial;
+  font-size: 16px;
+  border: 1px solid rgb(192, 192, 192);
+  border-radius: 2px 0 0 2px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.search-button {
+  box-sizing: border-box;
+  height: 40px;
+  width: 64px;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgb(192, 192, 192);
+  margin-left: -1px;
+  margin-right: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon {
+  height: 24px;
+}
+
+.voice-search-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(245, 245, 245);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voice-search-icon {
+  height: 24px;
+}
+
+.right-section {
+  width: 150px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.current-user-picture {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+/*
+  今のカードは inline-block で、文字のように横に流れている。
+  画面の幅で、1行に何枚入るかが変わってしまう。
+
+  display: grid は、中の要素を表（マス目）のように並べる。
+  grid-template-columns は列の数と幅。1fr 1fr 1fr は「同じ幅の列を3つ」。
+  fr は、残った幅を分ける単位。1fr が3つなら、3等分。
+  4本目は自動で次の行に行く。折り返しは grid がやる。
+  column-gap は列の間、row-gap は行の間。
+
+  .video-grid に display: grid、grid-template-columns: 1fr 1fr 1fr、
+  column-gap: 16px、row-gap: 40px を足す。padding はそのまま。
+
+  .video-preview の幅と並び方は、もう grid が決める。
+  width、display、vertical-align、margin-right を消す。中が空になったら、ルールごと消す。
+
+  .video-info の width: 248px は、カードが 300px だったときの数字。
+  列の幅は画面で変わるので、width をやめて flex: 1 にする。
+  flex: 1 はヘッダーの検索欄と同じ。アバターの残りを全部使う。
+*/
+
+.video-grid {
+  padding: 24px 16px 0;
+}
+
+.video-preview {
+  width: 300px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+}
+
+.thumbnail-row {
+  margin-bottom: 12px;
+}
+
+.thumbnail {
+  width: 100%;
+  display: block;
+}
+
+.video-info-grid {
+  display: flex;
+}
+
+.channel-picture {
+  width: 52px;
+}
+
+.profile-picture {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: block;
+}
+
+.video-info {
+  width: 248px;
+  text-align: left;
+}
+
+.video-title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.video-author,
+.video-stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+.video-author {
+  margin-bottom: 4px;
+}

@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  background-color: white;
+  color: rgb(15, 15, 15);
+  font-family: Roboto, Arial;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.header {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.left-section {
+  width: 150px;
+}
+
+.youtube-logo {
+  height: 20px;
+  display: block;
+}
+
+.middle-section {
+  flex: 1;
+  max-width: 640px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  flex: 1;
+  box-sizing: border-box;
+  height: 40px;
+  padding-left: 12px;
+  font-family: Roboto, Arial;
+  font-size: 16px;
+  border: 1px solid rgb(192, 192, 192);
+  border-radius: 2px 0 0 2px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.search-button {
+  box-sizing: border-box;
+  height: 40px;
+  width: 64px;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgb(192, 192, 192);
+  margin-left: -1px;
+  margin-right: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon {
+  height: 24px;
+}
+
+.voice-search-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(245, 245, 245);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voice-search-icon {
+  height: 24px;
+}
+
+.right-section {
+  width: 150px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.current-user-picture {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+/*
+  display: grid は、中の要素をマス目のように並べる。
+  grid-template-columns は列の数と幅。1fr 1fr 1fr は同じ幅の列を3つ。
+  fr は、残った幅を分ける単位。1fr が3つなら3等分になる。
+  3本で1行がいっぱいになると、4本目は自動で次の行に行く。
+  column-gap は列と列の間、row-gap は行と行の間。
+*/
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+  padding: 24px 16px 0;
+}
+
+.thumbnail-row {
+  margin-bottom: 12px;
+}
+
+.thumbnail {
+  width: 100%;
+  display: block;
+}
+
+.video-info-grid {
+  display: flex;
+}
+
+.channel-picture {
+  width: 52px;
+}
+
+.profile-picture {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: block;
+}
+
+/*
+  列の幅は画面の幅で変わるので、決まった width はやめる。
+  flex: 1 で、アバターの横の残りの幅を全部使う。検索欄と同じ指定。
+*/
+.video-info {
+  flex: 1;
+  text-align: left;
+}
+
+.video-title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.video-author,
+.video-stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+.video-author {
+  margin-bottom: 4px;
+}
